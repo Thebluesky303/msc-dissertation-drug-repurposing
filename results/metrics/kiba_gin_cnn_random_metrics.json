@@ -1,0 +1,16 @@
+{
+    "mse": 0.49550568842084053,
+    "rmse": 0.7039216493480226,
+    "mae": 0.4704695574977472,
+    "concordance_index": 0.713551586210965,
+    "pearson_correlation": 0.5354366725557279,
+    "dataset": "kiba",
+    "model": "GIN + CNN",
+    "model_name": "gin",
+    "split_type": "random",
+    "random_seed": 42,
+    "best_epoch": 30,
+    "best_validation_mse": 0.5022941285385628,
+    "training_runtime_minutes": 69.32482311528487,
+    "trainable_parameters": 348801
+}

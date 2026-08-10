@@ -1,0 +1,7 @@
+candidate_drug_rank,drug_id,drug_name,development_status,aml_targets_screened,mean_predicted_kiba_score,median_predicted_kiba_score,mean_target_percentile,top_three_target_appearances,number_one_target_appearances,exploratory_pair_count,highest_scoring_target,highest_scoring_target_name,highest_predicted_kiba_score,rank_for_highest_scoring_target,best_pair_prediction_status
+1,PUBCHEM_644241,nilotinib,repurposing_candidate,6,11.960456848144531,11.855376243591309,0.9444444444444445,6,5,5,FLT3,Receptor-type tyrosine-protein kinase FLT3,12.511865615844728,3,cold_drug_like
+2,PUBCHEM_216239,sorafenib,repurposing_candidate,6,11.882664998372396,11.71427869796753,0.8333333333333334,6,0,5,FLT3,Receptor-type tyrosine-protein kinase FLT3,12.698848724365234,2,cold_drug_like
+3,PUBCHEM_5329102,sunitinib,repurposing_candidate,6,11.889613310496012,11.673023223876953,0.7222222222222222,6,1,5,FLT3,Receptor-type tyrosine-protein kinase FLT3,12.93037223815918,1,cold_drug_like
+4,PUBCHEM_25126798,ruxolitinib,repurposing_candidate,6,11.699001789093018,11.636720180511475,0.47222222222222227,0,0,5,FLT3,Receptor-type tyrosine-protein kinase FLT3,12.04228401184082,5,cold_drug_like
+5,PUBCHEM_24826799,ponatinib,repurposing_candidate,6,11.630574226379395,11.519407749176025,0.3611111111111111,0,0,5,FLT3,Receptor-type tyrosine-protein kinase FLT3,12.192899703979492,4,cold_drug_like
+6,PUBCHEM_3062316,dasatinib,repurposing_candidate,6,11.404195626576742,11.307432174682617,0.16666666666666666,0,0,5,FLT3,Receptor-type tyrosine-protein kinase FLT3,11.920171737670898,6,cold_drug_like

@@ -1,0 +1,7 @@
+target_id,gene_symbol,target_name,target_seen_in_kiba,target_model_status,candidate_drugs,novel_pairs,observed_kiba_pairs
+O00255,MEN1,Menin,False,unseen_target,12,12,0
+O75874,IDH1,Isocitrate dehydrogenase [NADP] cytoplasmic,False,unseen_target,12,12,0
+P10415,BCL2,Apoptosis regulator Bcl-2,False,unseen_target,12,12,0
+P26951,IL3RA,Interleukin-3 receptor subunit alpha (CD123),False,unseen_target,12,12,0
+P36888,FLT3,Receptor-type tyrosine-protein kinase FLT3,True,seen_target,12,12,0
+P48735,IDH2,Isocitrate dehydrogenase [NADP] mitochondrial,False,unseen_target,12,12,0

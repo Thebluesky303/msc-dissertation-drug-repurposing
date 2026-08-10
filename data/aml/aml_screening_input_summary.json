@@ -1,0 +1,16 @@
+{
+    "selected_model": "GAT + CNN",
+    "selected_drug_encoder": "gat",
+    "selected_protein_representation": "cnn",
+    "number_of_aml_targets": 6,
+    "targets_seen_in_kiba": 1,
+    "targets_unseen_in_kiba": 5,
+    "truncated_target_sequences": 0,
+    "number_of_candidate_drugs": 12,
+    "drugs_seen_in_kiba": 0,
+    "drugs_unseen_in_kiba": 12,
+    "multiple_fragment_drugs": 0,
+    "maximum_protein_length": 1000,
+    "target_output_file": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/data/aml/aml_targets_prepared.csv",
+    "candidate_drug_output_file": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/data/aml/candidate_drugs_prepared.csv"
+}

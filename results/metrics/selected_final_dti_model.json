@@ -1,0 +1,24 @@
+{
+    "selected_model": "GAT + CNN",
+    "selected_drug_encoder": "gat",
+    "selected_protein_representation": "cnn",
+    "dataset_used_for_representation_test": "kiba",
+    "comparison_models": [
+        "GAT + CNN",
+        "GAT + frozen ESM-2"
+    ],
+    "comparison_splits": [
+        "random",
+        "cold_target"
+    ],
+    "cnn_random_validation_mse": 0.45865298591283227,
+    "esm2_random_validation_mse": 0.4998503527481253,
+    "cnn_cold_target_validation_mse": 0.5469121534426308,
+    "esm2_cold_target_validation_mse": 0.5467480439919666,
+    "relative_cold_target_difference": 0.0003000654668782288,
+    "practical_tie_threshold": 0.001,
+    "selection_reason": "The cold-target validation MSE difference was below the practical tie threshold. GAT + CNN was selected because it achieved substantially better random-split validation performance and lower test RMSE on both evaluation splits.",
+    "esm2_evaluated": true,
+    "esm2_selected": false,
+    "random_seed": 42
+}

@@ -1,0 +1,54 @@
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+
+# Jupyter
+.ipynb_checkpoints/
+
+# macOS
+.DS_Store
+
+# Environments
+.env
+.venv/
+venv/
+env/
+
+# IDE files
+.vscode/
+.idea/
+
+# Raw benchmark datasets
+data/raw/davis/*
+!data/raw/davis/.gitkeep
+
+data/raw/kiba/*
+!data/raw/kiba/.gitkeep
+
+# Generated processed datasets
+data/processed/*.csv
+data/processed/*.pkl
+data/processed/*.pt
+
+# Generated data splits
+data/processed/splits/random/*
+!data/processed/splits/random/.gitkeep
+
+data/processed/splits/cold_drug/*
+!data/processed/splits/cold_drug/.gitkeep
+
+data/processed/splits/cold_target/*
+!data/processed/splits/cold_target/.gitkeep
+
+# Trained model weights
+models/*
+!models/.gitkeep
+
+# Temporary/cache files
+*.log
+*.tmp
+*.bak
+# Local project environment
+.venv_dti/

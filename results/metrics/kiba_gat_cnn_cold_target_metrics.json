@@ -1,0 +1,16 @@
+{
+    "mse": 0.4768688356262697,
+    "rmse": 0.6905569025259756,
+    "mae": 0.4914631982550843,
+    "concordance_index": 0.6041851514368992,
+    "pearson_correlation": 0.3835615150282693,
+    "dataset": "kiba",
+    "model": "GAT + CNN",
+    "model_name": "gat",
+    "split_type": "cold_target",
+    "random_seed": 42,
+    "best_epoch": 30,
+    "best_validation_mse": 0.5469121534426308,
+    "training_runtime_minutes": 90.33686177569908,
+    "trainable_parameters": 300033
+}

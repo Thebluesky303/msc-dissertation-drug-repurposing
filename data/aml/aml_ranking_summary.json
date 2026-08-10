@@ -1,0 +1,21 @@
+{
+    "selected_model": "GAT + CNN",
+    "training_dataset": "KIBA",
+    "ranking_direction": "higher transformed KIBA score indicates stronger predicted binding",
+    "number_of_ranked_pairs": 72,
+    "eligible_repurposing_pairs": 36,
+    "top_candidates_per_target": 3,
+    "number_of_target_shortlist_pairs": 18,
+    "overall_shortlist_size": 10,
+    "highest_ranked_candidate_drug": "nilotinib",
+    "highest_ranked_candidate_drug_id": "PUBCHEM_644241",
+    "highest_ranked_candidate_target": "FLT3",
+    "candidate_selection_basis": "Within-target predicted affinity ranking with checkpoint-training overlaps and reference drugs excluded from the repurposing shortlist.",
+    "outputs": {
+        "ranked_predictions": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/results/predictions/aml_ranked_screening_predictions.csv",
+        "candidate_pairs": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/data/aml/aml_repurposing_candidate_pairs.csv",
+        "top_candidates_per_target": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/data/aml/aml_top_candidates_per_target.csv",
+        "overall_shortlist": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/data/aml/aml_overall_candidate_shortlist.csv",
+        "candidate_drug_summary": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/data/aml/aml_candidate_drug_summary.csv"
+    }
+}

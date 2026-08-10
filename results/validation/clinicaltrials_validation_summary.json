@@ -1,0 +1,20 @@
+{
+    "api_version": "2.0.5",
+    "clinicaltrials_data_timestamp": "2026-08-05T09:00:06",
+    "unique_drugs_searched": 9,
+    "drugs_with_any_registered_trial": 9,
+    "drugs_with_aml_trials": 9,
+    "drugs_with_active_aml_trials": 8,
+    "drugs_with_aml_results": 9,
+    "unique_drug_aml_study_records": 778,
+    "evidence_level": "drug_disease_clinical_evidence",
+    "target_specific_validation": false,
+    "checked_utc": "2026-08-05T19:11:40.367019+00:00",
+    "outputs": {
+        "drug_search_summary": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/results/validation/clinicaltrials_drug_search_summary.csv",
+        "aml_studies": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/results/validation/clinicaltrials_aml_studies.csv",
+        "drug_summary": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/results/validation/clinicaltrials_drug_summary.csv",
+        "pair_summary": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/results/validation/clinicaltrials_pair_summary.csv",
+        "updated_validation_evidence": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/data/aml/validation_evidence.csv"
+    }
+}

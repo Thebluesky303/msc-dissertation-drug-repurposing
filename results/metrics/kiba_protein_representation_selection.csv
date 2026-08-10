@@ -1,0 +1,3 @@
+representation_rank,model,protein_representation,average_validation_rank,validation_wins,average_test_rmse_rank,average_training_minutes,trainable_parameters,cold_target_validation_mse,cold_target_validation_rank
+1,GAT + frozen ESM-2,frozen_esm2,1.5,1,2.0,56.21690999549077,125313.0,0.5467480439919666,1
+2,GAT + CNN,cnn,1.5,1,1.0,88.70025726840831,300033.0,0.5469121534426308,2

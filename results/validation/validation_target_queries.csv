@@ -1,0 +1,7 @@
+target_id,gene_symbol,target_name,target_class,target_source_reference,uniprot_accession,chembl_target_query,pubmed_target_query
+P10415,BCL2,Apoptosis regulator Bcl-2,apoptosis_regulator,UniProtKB:P10415,P10415,BCL2,BCL2
+P36888,FLT3,Receptor-type tyrosine-protein kinase FLT3,protein_kinase,UniProtKB:P36888,P36888,FLT3,FLT3
+O75874,IDH1,Isocitrate dehydrogenase [NADP] cytoplasmic,metabolic_enzyme,UniProtKB:O75874,O75874,IDH1,IDH1
+P48735,IDH2,Isocitrate dehydrogenase [NADP] mitochondrial,metabolic_enzyme,UniProtKB:P48735,P48735,IDH2,IDH2
+P26951,IL3RA,Interleukin-3 receptor subunit alpha (CD123),cell_surface_receptor,UniProtKB:P26951,P26951,IL3RA,IL3RA
+O00255,MEN1,Menin,transcriptional_regulator,UniProtKB:O00255,O00255,MEN1,MEN1

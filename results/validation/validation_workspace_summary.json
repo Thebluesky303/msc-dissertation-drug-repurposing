@@ -1,0 +1,21 @@
+{
+    "total_validation_pairs": 54,
+    "repurposing_candidate_pairs": 18,
+    "reference_control_pairs": 36,
+    "unique_validation_drugs": 9,
+    "unique_validation_targets": 6,
+    "candidate_selection_sources": [
+        "top_candidates_per_target",
+        "overall_candidate_shortlist"
+    ],
+    "external_evidence_sources_planned": [
+        "ChEMBL",
+        "PubMed",
+        "ClinicalTrials.gov"
+    ],
+    "validation_pairs_file": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/data/aml/validation_pairs.csv",
+    "validation_evidence_file": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/data/aml/validation_evidence.csv",
+    "drug_query_file": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/results/validation/validation_drug_queries.csv",
+    "target_query_file": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/results/validation/validation_target_queries.csv",
+    "created_utc": "2026-08-05T14:24:09.672542+00:00"
+}

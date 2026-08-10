@@ -1,0 +1,4 @@
+external_evidence_strength,final_validation_status,candidate_pairs,unique_drugs,unique_targets,mean_predicted_kiba_score,mean_external_evidence_score
+strong_external_support,experimentally_supported_pair_with_aml_context,3,3,1,12.713695526123047,7.0
+moderate_external_support,aml_context_support_only,8,3,4,11.705023646354675,4.0
+limited_external_support,aml_context_support_only,7,3,4,11.802162170410156,3.0

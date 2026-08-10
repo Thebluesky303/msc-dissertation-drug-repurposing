@@ -1,0 +1,7 @@
+target_id,gene_symbol,target_name,top_candidate_drug_id,top_candidate_drug,top_predicted_kiba_score,checkpoint_prediction_status,evidence_priority
+P10415,BCL2,Apoptosis regulator Bcl-2,PUBCHEM_644241,nilotinib,11.831853866577148,cold_drug_target_like,3
+P36888,FLT3,Receptor-type tyrosine-protein kinase FLT3,PUBCHEM_5329102,sunitinib,12.93037223815918,cold_drug_like,2
+O75874,IDH1,Isocitrate dehydrogenase [NADP] cytoplasmic,PUBCHEM_644241,nilotinib,11.78808879852295,cold_drug_target_like,3
+P48735,IDH2,Isocitrate dehydrogenase [NADP] mitochondrial,PUBCHEM_644241,nilotinib,11.81701374053955,cold_drug_target_like,3
+P26951,IL3RA,Interleukin-3 receptor subunit alpha (CD123),PUBCHEM_644241,nilotinib,11.878898620605469,cold_drug_target_like,3
+O00255,MEN1,Menin,PUBCHEM_644241,nilotinib,11.935020446777344,cold_drug_target_like,3

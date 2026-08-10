@@ -1,0 +1,55 @@
+pair_id,pair_mapping_complete,chembl_activity_count,chembl_direct_binding_count,chembl_high_quality_pchembl_count,chembl_document_count,chembl_activity_types,chembl_assay_types,chembl_best_pchembl_value,chembl_median_pchembl_value,direct_drug_target_evidence,chembl_validation_status
+AMLPAIR_000019,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000007,True,1,1,0,1,Kd,B,,,True,binding_evidence_without_valid_pchembl
+AMLPAIR_000025,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000001,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000031,True,85,85,22,36,Activity; EC50; IC50; Kd; Ki; k_off; kon,B,10.74,8.515,True,quantitative_binding_evidence_found
+AMLPAIR_000013,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000020,True,42,42,17,16,GI50; IC50; Kd; Residual Activity; Selectivity,B,9.0,7.82,True,quantitative_binding_evidence_found
+AMLPAIR_000026,True,222,222,77,53,Activity; FC; GI50; IC50; Inhibition; Kd; Ki; Ratio IC50; k_off; kon,B,9.63,8.13,True,quantitative_binding_evidence_found
+AMLPAIR_000008,True,47,47,23,24,Activity; IC50; Inhibition; Kd; Ki; k_off; kon,B,9.8,8.7,True,quantitative_binding_evidence_found
+AMLPAIR_000032,True,1,1,0,1,Kd,B,,,True,binding_evidence_without_valid_pchembl
+AMLPAIR_000002,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000014,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000021,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000009,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000027,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000003,True,24,24,6,4,Activity; Delta Tm; IC50; Imax; Inhibition; Kd,B,6.17,4.925,True,quantitative_binding_evidence_found
+AMLPAIR_000033,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000015,True,85,85,26,15,Activity; Delta Tm; EC50; IC50; Inhibition; Kd; k_off; kon,B,8.46,7.385,True,quantitative_binding_evidence_found
+AMLPAIR_000022,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000010,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000028,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000004,True,26,26,15,9,IC50; Inhibition; k_off; kon,B,8.05,6.51,True,quantitative_binding_evidence_found
+AMLPAIR_000034,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000016,True,5,5,1,3,IC50,B,5.14,5.14,True,quantitative_binding_evidence_found
+AMLPAIR_000024,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000012,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000006,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000030,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000036,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000018,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000023,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000011,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000029,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000005,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000035,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000017,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000043,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000061,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000067,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000068,True,85,85,36,33,IC50; INH; Inhibition; K; Kd; Ki; Ratio; Ratio IC50; T1/2,B,9.66,8.145,True,quantitative_binding_evidence_found
+AMLPAIR_000062,True,83,83,30,38,GI50; IC50; Inhibition; Kd,B,8.89,7.455,True,quantitative_binding_evidence_found
+AMLPAIR_000044,True,12,12,2,4,IC50; Inhibition; Kd,B,5.02,4.71,True,quantitative_binding_evidence_found
+AMLPAIR_000045,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000063,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000069,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000046,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000064,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000070,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000048,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000066,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000072,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000047,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000065,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found
+AMLPAIR_000071,True,0,0,0,0,,,,,False,no_chembl_binding_evidence_found

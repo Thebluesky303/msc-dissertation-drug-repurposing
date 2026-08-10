@@ -1,0 +1,16 @@
+{
+    "selected_model": "GAT + CNN",
+    "number_of_candidate_drugs": 12,
+    "number_of_aml_targets": 6,
+    "expected_pair_count": 72,
+    "generated_pair_count": 72,
+    "novel_pair_count": 72,
+    "observed_kiba_pair_count": 0,
+    "reference_control_pair_count": 36,
+    "repurposing_candidate_pair_count": 36,
+    "generalisation_category_counts": {
+        "cold_drug_target_like": 60,
+        "cold_drug_like": 12
+    },
+    "pair_output_file": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/data/aml/aml_screening_pairs.csv"
+}

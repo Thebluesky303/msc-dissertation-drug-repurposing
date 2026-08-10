@@ -1,0 +1,32 @@
+{
+    "selected_prediction_model": "GAT + CNN",
+    "training_dataset": "KIBA",
+    "total_validation_pairs": 54,
+    "repurposing_candidate_pairs": 18,
+    "final_shortlist_size": 10,
+    "strong_support_candidates": 3,
+    "moderate_support_candidates": 8,
+    "limited_support_candidates": 7,
+    "model_only_candidates": 0,
+    "expected_reference_pairs": 6,
+    "recovered_reference_pairs": 2,
+    "reference_control_recovery_rate": 0.3333333333333333,
+    "highest_ranked_candidate": {
+        "drug_name": "sunitinib",
+        "gene_symbol": "FLT3",
+        "predicted_kiba_score": 12.93037223815918,
+        "external_evidence_score": 7,
+        "external_evidence_strength": "strong_external_support"
+    },
+    "important_interpretation": "PubMed results are keyword-search results and require manual review. Clinical-trial records demonstrate drug\u2013disease investigation but do not independently validate the predicted molecular target.",
+    "created_utc": "2026-08-05T19:21:20.619338+00:00",
+    "outputs": {
+        "final_validation_assessment": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/data/aml/final_validation_assessment.csv",
+        "final_candidate_assessment": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/data/aml/final_candidate_assessment.csv",
+        "final_shortlist": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/data/aml/final_validated_candidate_shortlist.csv",
+        "top_candidate_per_target": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/data/aml/final_top_candidate_per_target.csv",
+        "reference_control_assessment": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/data/aml/reference_control_assessment.csv",
+        "evidence_summary": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/results/validation/final_candidate_evidence_summary.csv",
+        "evidence_plot": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/results/plots/final_aml_candidate_evidence_scores.png"
+    }
+}

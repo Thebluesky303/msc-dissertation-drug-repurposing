@@ -1,0 +1,21 @@
+{
+    "dataset": "kiba",
+    "drug_encoder": "gat",
+    "baseline_protein_encoder": "cnn",
+    "experimental_protein_encoder": "frozen_esm2",
+    "esm2_model": "facebook/esm2_t6_8M_UR50D",
+    "esm2_embedding_dimension": 320,
+    "esm2_pooling": "mean_residue_pooling",
+    "maximum_protein_residues": 1000,
+    "protein_projection_dimension": 128,
+    "fusion_hidden_dimension": 128,
+    "dropout": 0.2,
+    "evaluation_splits": [
+        "random",
+        "cold_target"
+    ],
+    "gat_cnn_trainable_parameters": 300033,
+    "gat_esm2_trainable_parameters": 125313,
+    "esm2_fine_tuned": false,
+    "random_seed": 42
+}

@@ -1,0 +1,16 @@
+{
+    "mse": 0.5238317483997226,
+    "rmse": 0.7237622181350188,
+    "mae": 0.4945535377287375,
+    "concordance_index": 0.7002486532188207,
+    "pearson_correlation": 0.5092308082859269,
+    "dataset": "kiba",
+    "model": "GAT + CNN",
+    "model_name": "gat",
+    "split_type": "cold_drug",
+    "random_seed": 42,
+    "best_epoch": 29,
+    "best_validation_mse": 0.4837728151793901,
+    "training_runtime_minutes": 94.05843219375238,
+    "trainable_parameters": 300033
+}

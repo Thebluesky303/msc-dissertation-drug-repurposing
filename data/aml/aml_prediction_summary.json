@@ -1,0 +1,18 @@
+{
+    "selected_model": "GAT + CNN",
+    "checkpoint": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/models/best_kiba_gat_cnn_random.pt",
+    "training_dataset": "KIBA",
+    "training_split": "random",
+    "protein_representation": "CNN",
+    "number_of_screening_pairs": 72,
+    "number_of_candidate_drugs": 12,
+    "number_of_aml_targets": 6,
+    "checkpoint_training_overlap_pairs": 0,
+    "minimum_predicted_kiba_score": 11.238640785217285,
+    "maximum_predicted_kiba_score": 13.457741737365723,
+    "mean_predicted_kiba_score": 11.863018790880838,
+    "prediction_runtime_seconds": 0.4998345000203699,
+    "predictions_are_experimental": true,
+    "ground_truth_available": false,
+    "prediction_output": "/Users/bikashlimbu/Library/CloudStorage/OneDrive2-BuckinghamshireNewUniversity/Dissertation/model/aml_gnn_dti_repurposing/results/predictions/aml_gat_cnn_screening_predictions.csv"
+}

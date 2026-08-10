@@ -1,0 +1,16 @@
+{
+    "mse": 0.668490403392403,
+    "rmse": 0.8176126242863444,
+    "mae": 0.5408427603667396,
+    "concordance_index": 0.6377341394431348,
+    "pearson_correlation": 0.2869230350955591,
+    "dataset": "kiba",
+    "model": "GIN + CNN",
+    "model_name": "gin",
+    "split_type": "cold_drug",
+    "random_seed": 42,
+    "best_epoch": 2,
+    "best_validation_mse": 0.6644570309125425,
+    "training_runtime_minutes": 23.815916161118853,
+    "trainable_parameters": 348801
+}

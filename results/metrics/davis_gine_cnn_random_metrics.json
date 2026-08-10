@@ -1,0 +1,18 @@
+{
+    "dataset": "Davis",
+    "split": "random",
+    "model": "GINE + CNN",
+    "best_epoch": 30,
+    "best_validation_mse": 0.45201414651292393,
+    "test_mse": 0.47486582927657484,
+    "test_rmse": 0.6891050930566214,
+    "test_mae": 0.43169342448373516,
+    "test_ci": 0.8190379283031062,
+    "test_pearson": 0.6302779305867577,
+    "trainable_parameters": 351403,
+    "bond_feature_dim": 6,
+    "random_seed": 42,
+    "training_runtime_seconds": 1283.0123890000395,
+    "continuation_decision": "CONTINUE_ALL_SPLITS",
+    "continuation_reason": "GINE achieved a lower validation MSE than GAT + CNN."
+}

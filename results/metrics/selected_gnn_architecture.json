@@ -1,0 +1,12 @@
+{
+    "selected_model": "GAT + CNN",
+    "selected_model_name": "gat",
+    "selection_basis": "Average validation rank across Davis and KIBA random, cold-drug and cold-target experiments",
+    "number_of_validation_experiments": 6,
+    "average_validation_rank": 1.3333333333333333,
+    "median_validation_rank": 1.0,
+    "validation_wins": 5,
+    "second_place_finishes": 0,
+    "worst_validation_rank": 3,
+    "average_validation_ratio_to_best": 1.0074223794861608
+}
