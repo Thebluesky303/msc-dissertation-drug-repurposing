@@ -1,5 +1,0 @@
-query_type,number_of_queries,queries_with_results,total_records_reported,median_records_per_query
-drug_aml,9,9,4415,348.0
-drug_target,54,45,5793,21.5
-drug_target_aml,54,42,3704,16.5
-target_aml,6,6,9409,920.0

@@ -1,9 +1,0 @@
-{
-    "rows": 118254,
-    "unique_drugs": 2111,
-    "unique_targets": 229,
-    "duplicate_pairs": 0,
-    "invalid_smiles": 0,
-    "empty_protein_sequences": 0,
-    "non_finite_affinities": 0
-}

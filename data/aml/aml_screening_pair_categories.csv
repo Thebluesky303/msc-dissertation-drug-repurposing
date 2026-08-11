@@ -1,3 +1,0 @@
-generalisation_category,benchmark_analogue,screening_evidence_level,number_of_pairs,unique_drugs,unique_targets,reference_control_pairs
-cold_drug_target_like,cold_drug_target_not_evaluated,exploratory_only,60,12,5,30
-cold_drug_like,cold_drug_split,cold_start_supported,12,12,1,6

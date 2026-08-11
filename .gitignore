@@ -1,54 +1,112 @@
-# Python
+# Python bytecode, test and tool caches
 __pycache__/
 *.py[cod]
-*.pyo
-*.pyd
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
 
-# Jupyter
-.ipynb_checkpoints/
-
-# macOS
-.DS_Store
-
-# Environments
+# Local environments and secrets
 .env
+.env.*
+!.env.example
 .venv/
+.venv_*/
 venv/
 env/
+conda-env/
 
-# IDE files
+# Notebooks and editor files
+.ipynb_checkpoints/
+**/.ipynb_checkpoints/
 .vscode/
 .idea/
+*.swp
+*.swo
 
-# Raw benchmark datasets
-data/raw/davis/*
-!data/raw/davis/.gitkeep
+# Operating-system files
+.DS_Store
+Thumbs.db
 
-data/raw/kiba/*
-!data/raw/kiba/.gitkeep
-
-# Generated processed datasets
-data/processed/*.csv
-data/processed/*.pkl
-data/processed/*.pt
-
-# Generated data splits
-data/processed/splits/random/*
-!data/processed/splits/random/.gitkeep
-
-data/processed/splits/cold_drug/*
-!data/processed/splits/cold_drug/.gitkeep
-
-data/processed/splits/cold_target/*
-!data/processed/splits/cold_target/.gitkeep
-
-# Trained model weights
-models/*
-!models/.gitkeep
-
-# Temporary/cache files
+# Logs and temporary files
 *.log
 *.tmp
 *.bak
-# Local project environment
-.venv_dti/
+*.orig
+
+# Raw benchmark data: keep only documentation/placeholders.
+data/raw/**
+!data/raw/README.md
+!data/raw/.gitkeep
+
+# Materialised pair tables, tensors and ESM-2 caches; compact pair-table
+# provenance sidecars may be reviewed/versioned separately.
+data/processed/**
+!data/processed/README.md
+!data/processed/.gitkeep
+!data/processed/*.metadata.json
+**/esm2_cache/**
+**/esm_cache/**
+**/*esm2*embedding*.pt
+**/*residue*embedding*.pt
+caches/esm2/**
+**/esm2_embeddings/**
+
+# Full pair-membership manifests are local/Drive; compact metadata is versionable.
+data/splits/**
+!data/splits/README.md
+!data/splits/.gitkeep
+!data/splits/manifests/
+!data/splits/manifests/.gitkeep
+!data/splits/manifests/*.metadata.json
+!data/splits/metadata/
+!data/splits/metadata/.gitkeep
+!data/splits/metadata/*.json
+
+# Checkpoints and training state.
+models/**
+!models/README.md
+!models/.gitkeep
+checkpoints/**
+*.ckpt
+*.pth
+*.onnx
+
+# Full per-pair predictions are regenerated; allow explicit compact summaries.
+results/predictions/**
+!results/predictions/README.md
+!results/predictions/.gitkeep
+!results/predictions/*_summary.csv
+!results/predictions/*_summary.json
+
+# Large or intermediate screening artefacts; compact ranked summaries remain trackable.
+results/screening/raw/**
+results/screening/cache/**
+results/screening/*_all_pairs.csv
+results/screening/*_full_predictions.csv
+results/screening/*_predictions_full.csv
+results/screening/aml_approved_drug_pairs.csv
+results/screening/*pair_comparison*.csv
+results/screening/*pair_rank_comparison*.csv
+results/screening/*pair_predictions*.csv
+results/screening/*screening_pairs*.csv
+results/screening/*_embeddings.pt
+
+# Approved-drug source/preparation tables and full Cartesian AML caches.
+# Keep data/aml/README.md and the established aml_targets.csv versionable.
+data/aml/approved_drugs_raw.*
+data/aml/approved_drugs_metadata.csv
+data/aml/approved_drugs_prepared.csv
+data/aml/approved_drug_rejections.csv
+data/aml/aml_targets_prepared*.csv
+data/aml/*approved*screening_pairs*.csv
+data/aml/*approved*predictions_full*.csv
+data/aml/*all_pairs*.csv
+data/aml/*embedding*.pt
+results/screening/approved_drug_rejections.csv
+
+# Runtime/workspace copies used by Colab or Drive synchronisation.
+dti_workspace/
+drive_mount/
+artifacts/

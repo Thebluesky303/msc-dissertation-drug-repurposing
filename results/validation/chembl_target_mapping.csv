@@ -1,7 +1,0 @@
-target_id,gene_symbol,target_name,chembl_target_id,chembl_target_name,chembl_target_type,chembl_target_organism,chembl_target_match_status,chembl_target_match_count
-P10415,BCL2,Apoptosis regulator Bcl-2,CHEMBL4860,Apoptosis regulator Bcl-2,SINGLE PROTEIN,Homo sapiens,uniprot_single_protein_match,1
-P36888,FLT3,Receptor-type tyrosine-protein kinase FLT3,CHEMBL1974,Receptor-type tyrosine-protein kinase FLT3,SINGLE PROTEIN,Homo sapiens,uniprot_single_protein_match,1
-O75874,IDH1,Isocitrate dehydrogenase [NADP] cytoplasmic,CHEMBL2007625,Isocitrate dehydrogenase [NADP] cytoplasmic,SINGLE PROTEIN,Homo sapiens,uniprot_single_protein_match,1
-P48735,IDH2,Isocitrate dehydrogenase [NADP] mitochondrial,CHEMBL3991501,"Isocitrate dehydrogenase [NADP], mitochondrial",SINGLE PROTEIN,Homo sapiens,uniprot_single_protein_match,1
-P26951,IL3RA,Interleukin-3 receptor subunit alpha (CD123),CHEMBL3712987,Interleukin-3 receptor subunit alpha,SINGLE PROTEIN,Homo sapiens,uniprot_single_protein_match,1
-O00255,MEN1,Menin,CHEMBL1615381,Menin,SINGLE PROTEIN,Homo sapiens,uniprot_single_protein_match,1
