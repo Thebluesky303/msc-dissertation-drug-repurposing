@@ -1,198 +1,63 @@
-"""Evaluation metrics for drug–target affinity regression."""
-
-from __future__ import annotations
-
-from typing import Dict
+"""Evaluation metrics for drug-target affinity prediction."""
 
 import numpy as np
+import torch
 
 
-def _prepare_arrays(
-    true_values,
-    predicted_values,
-) -> tuple[np.ndarray, np.ndarray]:
-    """Convert inputs to validated one-dimensional NumPy arrays."""
+def _to_numpy(values) -> np.ndarray:
+    """Convert tensors or array-like values to a one-dimensional NumPy array."""
 
-    y_true = np.asarray(true_values, dtype=float).reshape(-1)
-    y_pred = np.asarray(predicted_values, dtype=float).reshape(-1)
+    if isinstance(values, torch.Tensor):
+        values = values.detach().cpu().numpy()
 
-    if y_true.size == 0:
-        raise ValueError("Metric inputs cannot be empty.")
+    return np.asarray(values, dtype=float).reshape(-1)
 
-    if y_true.shape != y_pred.shape:
+
+def _prepare_values(y_true, y_pred) -> tuple[np.ndarray, np.ndarray]:
+    """Prepare and validate true and predicted affinity values."""
+
+    y_true = _to_numpy(y_true)
+    y_pred = _to_numpy(y_pred)
+
+    if y_true.shape[0] != y_pred.shape[0]:
         raise ValueError(
-            "True and predicted values must have the same shape."
+            "y_true and y_pred must contain the same number of values."
         )
 
-    if not np.isfinite(y_true).all():
-        raise ValueError("True values contain non-finite values.")
+    valid = np.isfinite(y_true) & np.isfinite(y_pred)
+    y_true = y_true[valid]
+    y_pred = y_pred[valid]
 
-    if not np.isfinite(y_pred).all():
-        raise ValueError("Predicted values contain non-finite values.")
+    if y_true.size == 0:
+        raise ValueError("No valid values are available for evaluation.")
 
     return y_true, y_pred
 
 
-def mean_squared_error(
-    true_values,
-    predicted_values,
-) -> float:
+def mean_squared_error(y_true, y_pred) -> float:
     """Calculate mean squared error."""
 
-    y_true, y_pred = _prepare_arrays(
-        true_values,
-        predicted_values,
-    )
-
+    y_true, y_pred = _prepare_values(y_true, y_pred)
     return float(np.mean((y_true - y_pred) ** 2))
 
 
-def root_mean_squared_error(
-    true_values,
-    predicted_values,
-) -> float:
+def root_mean_squared_error(y_true, y_pred) -> float:
     """Calculate root mean squared error."""
 
-    return float(
-        np.sqrt(
-            mean_squared_error(
-                true_values,
-                predicted_values,
-            )
-        )
-    )
+    return float(np.sqrt(mean_squared_error(y_true, y_pred)))
 
 
-def mean_absolute_error(
-    true_values,
-    predicted_values,
-) -> float:
+def mean_absolute_error(y_true, y_pred) -> float:
     """Calculate mean absolute error."""
 
-    y_true, y_pred = _prepare_arrays(
-        true_values,
-        predicted_values,
-    )
-
+    y_true, y_pred = _prepare_values(y_true, y_pred)
     return float(np.mean(np.abs(y_true - y_pred)))
 
 
-class _FenwickTree:
-    """Fenwick tree used for efficient concordance calculation."""
+def pearson_correlation(y_true, y_pred) -> float:
+    """Calculate Pearson correlation between true and predicted values."""
 
-    def __init__(self, size: int) -> None:
-        self.tree = np.zeros(size + 1, dtype=np.int64)
-
-    def update(self, index: int, value: int = 1) -> None:
-        """Add a value at a one-based index."""
-
-        while index < len(self.tree):
-            self.tree[index] += value
-            index += index & -index
-
-    def query(self, index: int) -> int:
-        """Return the cumulative count up to a one-based index."""
-
-        total = 0
-
-        while index > 0:
-            total += int(self.tree[index])
-            index -= index & -index
-
-        return total
-
-
-def concordance_index(
-    true_values,
-    predicted_values,
-) -> float:
-    """
-    Calculate the concordance index efficiently.
-
-    A pair is concordant when the sample with the higher true affinity
-    also has the higher predicted affinity.
-
-    Prediction ties contribute 0.5.
-    Pairs with identical true values are excluded.
-    """
-
-    y_true, y_pred = _prepare_arrays(
-        true_values,
-        predicted_values,
-    )
-
-    if y_true.size < 2:
-        return float("nan")
-
-    prediction_values = np.unique(y_pred)
-
-    prediction_ranks = (
-        np.searchsorted(prediction_values, y_pred) + 1
-    )
-
-    sorted_indices = np.argsort(
-        y_true,
-        kind="mergesort",
-    )
-
-    sorted_true = y_true[sorted_indices]
-    sorted_ranks = prediction_ranks[sorted_indices]
-
-    tree = _FenwickTree(len(prediction_values))
-
-    concordant_score = 0.0
-    comparable_pairs = 0
-    previously_added = 0
-
-    group_start = 0
-    total_samples = len(sorted_true)
-
-    while group_start < total_samples:
-        group_end = group_start + 1
-
-        while (
-            group_end < total_samples
-            and sorted_true[group_end] == sorted_true[group_start]
-        ):
-            group_end += 1
-
-        # Compare this true-value group only against lower true values.
-        for rank in sorted_ranks[group_start:group_end]:
-            lower_predictions = tree.query(rank - 1)
-            equal_predictions = (
-                tree.query(rank) - tree.query(rank - 1)
-            )
-
-            concordant_score += (
-                lower_predictions
-                + 0.5 * equal_predictions
-            )
-
-            comparable_pairs += previously_added
-
-        # Add this group after comparisons to exclude true-value ties.
-        for rank in sorted_ranks[group_start:group_end]:
-            tree.update(int(rank))
-
-        previously_added += group_end - group_start
-        group_start = group_end
-
-    if comparable_pairs == 0:
-        return float("nan")
-
-    return float(concordant_score / comparable_pairs)
-
-
-def pearson_correlation(
-    true_values,
-    predicted_values,
-) -> float:
-    """Calculate Pearson correlation."""
-
-    y_true, y_pred = _prepare_arrays(
-        true_values,
-        predicted_values,
-    )
+    y_true, y_pred = _prepare_values(y_true, y_pred)
 
     if y_true.size < 2:
         return float("nan")
@@ -200,36 +65,97 @@ def pearson_correlation(
     if np.std(y_true) == 0 or np.std(y_pred) == 0:
         return float("nan")
 
-    correlation_matrix = np.corrcoef(y_true, y_pred)
-
-    return float(correlation_matrix[0, 1])
+    return float(np.corrcoef(y_true, y_pred)[0, 1])
 
 
-def calculate_regression_metrics(
-    true_values,
-    predicted_values,
-) -> Dict[str, float]:
-    """Calculate all regression metrics used by the project."""
+def concordance_index(y_true, y_pred) -> float:
+    """
+    Calculate the concordance index.
+
+    A value of 1.0 indicates perfect ranking, 0.5 indicates random ranking,
+    and values below 0.5 indicate poor ranking agreement.
+    """
+
+    y_true, y_pred = _prepare_values(y_true, y_pred)
+
+    if y_true.size < 2:
+        return float("nan")
+
+    # Rank the predicted values so comparisons can be counted efficiently.
+    unique_predictions = np.unique(y_pred)
+    prediction_ranks = np.searchsorted(unique_predictions, y_pred) + 1
+
+    order = np.argsort(y_true, kind="mergesort")
+    sorted_true = y_true[order]
+    sorted_ranks = prediction_ranks[order]
+
+    tree = np.zeros(len(unique_predictions) + 1, dtype=np.int64)
+
+    def update(index: int) -> None:
+        while index < len(tree):
+            tree[index] += 1
+            index += index & -index
+
+    def query(index: int) -> int:
+        total = 0
+        while index > 0:
+            total += tree[index]
+            index -= index & -index
+        return total
+
+    concordant = 0.0
+    comparable = 0
+    previous_count = 0
+
+    start = 0
+
+    while start < len(sorted_true):
+        end = start + 1
+
+        while (
+            end < len(sorted_true)
+            and sorted_true[end] == sorted_true[start]
+        ):
+            end += 1
+
+        # Compare this true-value group only with lower true values.
+        for rank in sorted_ranks[start:end]:
+            lower_predictions = query(rank - 1)
+            equal_predictions = query(rank) - lower_predictions
+
+            concordant += lower_predictions
+            concordant += 0.5 * equal_predictions
+            comparable += previous_count
+
+        # Add the current group only after all comparisons are complete,
+        # so pairs with equal true affinity are not counted.
+        for rank in sorted_ranks[start:end]:
+            update(int(rank))
+
+        previous_count += end - start
+        start = end
+
+    if comparable == 0:
+        return float("nan")
+
+    return float(concordant / comparable)
+
+
+def calculate_metrics(y_true, y_pred) -> dict:
+    """Calculate all regression metrics used in the project."""
+
+    y_true, y_pred = _prepare_values(y_true, y_pred)
+
+    mse = mean_squared_error(y_true, y_pred)
+    rmse = float(np.sqrt(mse))
+    mae = mean_absolute_error(y_true, y_pred)
+    ci = concordance_index(y_true, y_pred)
+    pearson = pearson_correlation(y_true, y_pred)
 
     return {
-        "mse": mean_squared_error(
-            true_values,
-            predicted_values,
-        ),
-        "rmse": root_mean_squared_error(
-            true_values,
-            predicted_values,
-        ),
-        "mae": mean_absolute_error(
-            true_values,
-            predicted_values,
-        ),
-        "concordance_index": concordance_index(
-            true_values,
-            predicted_values,
-        ),
-        "pearson_correlation": pearson_correlation(
-            true_values,
-            predicted_values,
-        ),
+        "mse": mse,
+        "rmse": rmse,
+        "mae": mae,
+        "ci": ci,
+        "pearson": pearson,
     }
