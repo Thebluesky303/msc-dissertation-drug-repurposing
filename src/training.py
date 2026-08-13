@@ -117,6 +117,10 @@ def train_one_epoch(
         loss = loss_function(predictions, targets)
 
         loss.backward()
+        torch.nn.utils.clip_grad_norm_(
+            model.parameters(),
+            max_norm=1.0,
+        )
         optimizer.step()
 
         batch_size = targets.size(0)
@@ -292,6 +296,12 @@ def fit_model(
         lr=learning_rate,
         weight_decay=weight_decay,
     )
+    scheduler = torch.optim.lr_scheduler.ReduceLROnPlateau(
+        optimizer,
+        mode="min",
+        factor=0.5,
+        patience=5,
+    )    
 
     history = []
 
@@ -314,6 +324,7 @@ def fit_model(
             loss_function=loss_function,
             device=device,
         )
+        scheduler.step(validation_loss)
 
         history.append(
             {
