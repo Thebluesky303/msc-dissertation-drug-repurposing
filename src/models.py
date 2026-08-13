@@ -487,13 +487,22 @@ def count_trainable_parameters(model: nn.Module) -> int:
 # Advanced GINE + frozen ESM-2 + cross-attention model
 # ---------------------------------------------------------------------
 
+# def _make_gine_mlp(hidden_dim: int) -> nn.Sequential:
+#     """Create the MLP used inside a GINE layer."""
+
+#     return nn.Sequential(
+#         nn.Linear(hidden_dim, hidden_dim),
+#         nn.GELU(),
+#         nn.Linear(hidden_dim, hidden_dim),
+#     )
+
 def _make_gine_mlp(hidden_dim: int) -> nn.Sequential:
     """Create the MLP used inside a GINE layer."""
 
     return nn.Sequential(
-        nn.Linear(hidden_dim, hidden_dim),
+        nn.Linear(hidden_dim, hidden_dim * 2),
         nn.GELU(),
-        nn.Linear(hidden_dim, hidden_dim),
+        nn.Linear(hidden_dim * 2, hidden_dim),
     )
 
 
